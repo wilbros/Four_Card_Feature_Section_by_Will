@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* ### Neutral */
+
+  --very-dar-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  font-size: 15px;
+  font-family: 'Poppins',  'Courier New', Courier, monospace;
+}
+
+main {
+  width: auto;
+  padding: 5rem 2rem;
+}
+
+.container {
+  height: auto;
+  padding-bottom: 5rem;
+  /* border: solid 1px black; */
+}
+
+.information {
+  text-align: center;
+}
+
+.information h1 {
+  color: var(--grayish-blue);
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+.information h1 span {
+  display: block;
+  color: var(--very-dar-blue);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.information p {
+  font-size: .95rem;
+  line-height: 1.75rem;
+  color: var(--grayish-blue);
+  margin-top: 0.75rem;
+}
+
+/* SUPERVISOR, TEAM BUILDER, KARMA, CALCULATOR PANELS */
+
+section {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.panel {
+  min-height: 17rem;
+  padding: 2rem;
+  border-bottom: solid 0.5rem hsla(0, 0%, 89%, 0.6);
+  border-radius: 0.6rem 0.6rem 1.25rem 1.25rem;
+  /* I can't figure out how to make the shadow at the bottom of the panel so I improvised */
+  /* box-shadow: 0rem 0.15rem 0.25rem var(--grayish-blue); */
+}
+
+.supervisor_panel {
+  border-top: solid 0.30rem var(--cyan);
+  margin-top: 4rem;
+}
+
+.team_builder_panel {
+  border-top: solid 0.30rem var(--red);
+}
+
+.karma_panel {
+  border-top: solid 0.30rem var(--orange);
+}
+
+.calculator_panel {
+  border-top: solid 0.30rem var(--blue);
+}
+
+section h2 {
+  margin-bottom: 0.25rem;
+  font-size: 1.6rem;
+  color: var(--very-dar-blue);
+}
+
+section p {
+  font-size: 1rem;
+  color: var(--grayish-blue);
+}
+
+section img {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+
+/* TABLET SCREENS */
+
+@media (min-width: 1024px) {
+
+  main {
+    width: auto;
+    padding: 3rem 5rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.75fr 1fr 1fr;
+    padding-bottom: 0;
+    margin: 1rem;
+  }
+
+  section {
+    margin-bottom: 0rem;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    width: 60%;
+    justify-self: center;
+  }
+
+  .information p {
+    width: 80%;
+  }
+
+  .panel {
+    min-height: 14rem;
+    border-bottom: solid 0.5rem hsla(0, 0%, 89%, 0.6);
+    border-radius: 0.6rem 0.6rem 1.25rem 1.25rem;
+    margin: 0rem 1.5rem 0 1.5rem;
+    padding: 1rem;
+  }
+
+  .panel img {
+    width: 2.5rem;
+    height: auto;
+  }
+
+  .supervisor_panel {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    align-self: center;
+    height: 14rem;
+  }
+
+  .calculator_panel{
+    margin-top: 1rem;
+  }
+
+  .karma_panel {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    align-self: center;
+    height: 14rem;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    max-width: 60rem;
+  }
+
+}

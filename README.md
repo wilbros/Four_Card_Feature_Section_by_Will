@@ -1,2 +1,2 @@
-# Four_Card_Feature_Section_by_Will
-Frontend Mentor Challenge
+# Four-Card-Feature-Section
+ 
